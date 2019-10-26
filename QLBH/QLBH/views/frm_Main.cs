@@ -1,6 +1,7 @@
 ﻿using DevExpress.XtraEditors;
 using DevExpress.XtraTab;
 using DevExpress.XtraTab.ViewInfo;
+using QLBH.Repository;
 using System.Windows.Forms;
 
 namespace QLBH
@@ -8,10 +9,14 @@ namespace QLBH
     public partial class frm_Main : DevExpress.XtraBars.Ribbon.RibbonForm
     {
         private static XtraTabControl tabstatic;
+        
+
+       
         public frm_Main()
         {
             InitializeComponent();
             tabstatic = xtraTabControl1;
+            
         }
        // #region Kiểm tra TabPabPage có tồn tại không
         public static bool KiemTraTabPage(string Ten)
@@ -295,6 +300,12 @@ namespace QLBH
             frm.Dock = DockStyle.Fill;
             frm.Show();
             xtraTabControl1.SelectedTabPage = xtraTabControl1.TabPages[ViTriTabPage(TabChiTietDatBan.Text)];
+        }
+
+        private void Button1_Click(object sender, System.EventArgs e)
+        {
+            
+            this.Close();
         }
     }
 }

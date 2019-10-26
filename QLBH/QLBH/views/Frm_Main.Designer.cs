@@ -70,6 +70,7 @@
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.ribbonPage7 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
@@ -336,6 +337,7 @@
             this.btn_DatBan,
             this.btn_chitietdatban});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
+            this.ribbonControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ribbonControl1.MaxItemId = 19;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
@@ -347,7 +349,7 @@
             this.ribbonPage9,
             this.ribbonPage6,
             this.ribbonPage8});
-            this.ribbonControl1.Size = new System.Drawing.Size(1219, 146);
+            this.ribbonControl1.Size = new System.Drawing.Size(1422, 178);
             // 
             // btn_DatBan
             // 
@@ -387,6 +389,7 @@
             // editFormUserControl1
             // 
             this.editFormUserControl1.Location = new System.Drawing.Point(0, 0);
+            this.editFormUserControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.editFormUserControl1.Name = "editFormUserControl1";
             this.editFormUserControl1.Size = new System.Drawing.Size(928, 395);
             this.editFormUserControl1.TabIndex = 0;
@@ -394,8 +397,9 @@
             // xtraTabPage1
             // 
             this.editFormUserControl1.SetBoundPropertyName(this.xtraTabPage1, "");
+            this.xtraTabPage1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(1213, 448);
+            this.xtraTabPage1.Size = new System.Drawing.Size(1415, 553);
             this.xtraTabPage1.Text = "Bắt đầu";
             // 
             // xtraTabControl1
@@ -403,10 +407,11 @@
             this.editFormUserControl1.SetBoundPropertyName(this.xtraTabControl1, "");
             this.xtraTabControl1.ClosePageButtonShowMode = DevExpress.XtraTab.ClosePageButtonShowMode.InAllTabPageHeaders;
             this.xtraTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.xtraTabControl1.Location = new System.Drawing.Point(0, 146);
+            this.xtraTabControl1.Location = new System.Drawing.Point(0, 178);
+            this.xtraTabControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.SelectedTabPage = this.xtraTabPage1;
-            this.xtraTabControl1.Size = new System.Drawing.Size(1219, 476);
+            this.xtraTabControl1.Size = new System.Drawing.Size(1422, 588);
             this.xtraTabControl1.TabIndex = 6;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1});
@@ -418,17 +423,30 @@
             this.ribbonPage7.Name = "ribbonPage7";
             this.ribbonPage7.Text = "Trợ Giúp";
             // 
+            // button1
+            // 
+            this.editFormUserControl1.SetBoundPropertyName(this.button1, "");
+            this.button1.Location = new System.Drawing.Point(1335, 69);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            // 
             // frm_Main
             // 
             this.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.Appearance.Options.UseBackColor = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.editFormUserControl1.SetBoundPropertyName(this, "");
-            this.ClientSize = new System.Drawing.Size(1219, 622);
+            this.ClientSize = new System.Drawing.Size(1422, 766);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.xtraTabControl1);
             this.Controls.Add(this.ribbonControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frm_Main";
             this.Ribbon = this.ribbonControl1;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -482,6 +500,7 @@
         private DevExpress.XtraBars.BarButtonItem btn_chitietdatban;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage7;
+        private System.Windows.Forms.Button button1;
     }
 }
 

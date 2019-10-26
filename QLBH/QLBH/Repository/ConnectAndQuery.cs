@@ -8,41 +8,51 @@ using System.Threading.Tasks;
 
 namespace QLBH.Repository
 {
-    class ConnectAndQuery
+    public class ConnectAndQuery
     {
-        SqlConnection sqlConnection;
+        string con = @"Data Source=DESKTOP-RPK6PAD\SQLEXPRESS;Initial Catalog=QLNhaHang;Integrated Security=True";
+        SqlConnection sqlConection = null;
+
+        public SqlConnection SqlConection { get => sqlConection; set => sqlConection = value; }
 
         public ConnectAndQuery()
         {
         }
-        public void Connect()
-        {
-            sqlConnection = new SqlConnection();
-            sqlConnection.ConnectionString = @"Data Source=DESKTOP-RPK6PAD\SQLEXPRESS;Initial Catalog=Quanlybanhang;Integrated Security=True";
-            sqlConnection.Open();
-        }
 
-        public void DisConnect()
+        private void ketnoiSQL()
         {
-            if (sqlConnection.State == ConnectionState.Open)
+            SqlConection = new SqlConnection(con);
+            if (SqlConection.State != ConnectionState.Open)
             {
-                sqlConnection.Close();
+                SqlConection.Open();
             }
         }
 
-        public DataTable LoadData(string sql)
+        private void DongketnoiSQL()
         {
-            DataTable dataTable = new DataTable();
-            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sql, sqlConnection);
-            sqlDataAdapter.Fill(dataTable);
-            return dataTable;
+            if (SqlConection.State != ConnectionState.Closed)
+            {
+                SqlConection.Close();
+            }
+            SqlConection.Dispose();
         }
 
-        public void Run(string sql)
+        public DataTable DocBang(String sql)
         {
+            DataTable dtBang = new DataTable();
+            ketnoiSQL();
+            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sql, con);
+            sqlDataAdapter.Fill(dtBang);
+            DongketnoiSQL();
+            return dtBang;
+        }
+
+        public void CapNhatDuLieu(String sql)
+        {
+            ketnoiSQL();
             SqlCommand sqlCommand = new SqlCommand();
+            sqlCommand.Connection = SqlConection;
             sqlCommand.CommandText = sql;
-            sqlCommand.Connection = sqlConnection;
             try
             {
                 sqlCommand.ExecuteNonQuery();
@@ -51,6 +61,9 @@ namespace QLBH.Repository
             {
                 ex.ToString();
             }
+            DongketnoiSQL();
         }
     }
+
+
 }
