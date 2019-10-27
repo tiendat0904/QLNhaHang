@@ -34,15 +34,15 @@ namespace QLBH
         private void Btn_Add_Click(object sender, EventArgs e)
         {
             //string a = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-            que = Select();
+            que = Select3();
             bool check = false;
             for (int i = 0; i < que.Count; i++)
             {
                 if (que[i].MaQue1.Equals(txt_MaQue.Text) || que[i].TenQue1.Equals(txt_TenQue.Text))
                 {
                     check = true;
-                    
-                    MessageBox.Show("Da co du lieu");
+
+                    MessageBox.Show("Đã có dữ liệu");
                     break;
                 }
             }
@@ -66,7 +66,7 @@ namespace QLBH
                 }
             }
         }
-        private List<Class_Que> Select()
+        private List<Class_Que> Select3()
         {
             string sql = "SELECT * FROM Que";
             List<Class_Que> list = new List<Class_Que>();
@@ -93,22 +93,59 @@ namespace QLBH
 
         private void Btn_refesrh_Click(object sender, EventArgs e)
         {
-            string sql = "update Que set TenQue=N'" + txt_TenQue.Text + "' where MaQue = N'" + txt_MaQue.Text + "'";
-            query.CapNhatDuLieu(sql);
-            fill();
+            que = Select3();
+            //bool check = false;
+            //for (int i = 0; i < que.Count; i++)
+            //{
+            //    if (que[i].TenQue1.Equals(txt_TenQue.Text))
+            //    {
+            //        check = true;
+
+            //        MessageBox.Show("Đã có tỉnh " + txt_TenQue.Text + " rồi");
+            //        break;
+            //    }
+            //}
+          //  if (check == false)
+            //{
+                if (txt_TenQue.Text.Trim() != "")
+                {
+
+                    string sql = "update Que set TenQue=N'" + txt_TenQue.Text + "' where MaQue = N'" + txt_MaQue.Text + "'";
+                    query.CapNhatDuLieu(sql);
+                    fill();
+
+                    que.Add(new Class_Que(txt_MaQue.Text, txt_TenQue.Text));
+                    txt_MaQue.Text = "";
+                    txt_TenQue.Text = "";
+                    txt_MaQue.Enabled = true;
+                    txt_MaQue.Focus();
+
+                }
+                else
+                {
+                    MessageBox.Show("vui lòng nhập đầy đủ thông tin");
+                }
+        //    }
+
         }
 
         private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            txt_MaQue.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-            txt_TenQue.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+
         }
 
         private void Btn_Delete_Click(object sender, EventArgs e)
         {
-            string sql = "delete from Que where MaQue=N'" + txt_MaQue.Text + "'"; ;
-            query.CapNhatDuLieu(sql);
-            fill();
+            if (MessageBox.Show("bạn có muốn xóa không ?", "thông báo", MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                string sql = "delete from Que where MaQue=N'" + txt_MaQue.Text + "'"; ;
+                query.CapNhatDuLieu(sql);
+                fill();
+                txt_MaQue.Enabled = true;
+                txt_MaQue.Text = "";
+                txt_TenQue.Text = "";
+            }
         }
 
         private void Btn_close_Click(object sender, EventArgs e)
@@ -120,15 +157,20 @@ namespace QLBH
 
         }
 
-        private void DataGridView1_DoubleClick(object sender, EventArgs e)
-        {
 
-        }
 
         private void Frm_QueQuan_Load(object sender, EventArgs e)
         {
             fill();
-            que = Select();
+            txt_MaQue.Focus();
+        }
+
+        private void DataGridView1_DoubleClick(object sender, EventArgs e)
+        {
+            txt_MaQue.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            txt_TenQue.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            txt_MaQue.Enabled = false;
+
         }
     }
 }

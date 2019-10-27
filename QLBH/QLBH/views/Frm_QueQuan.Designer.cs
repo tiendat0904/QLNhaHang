@@ -53,7 +53,7 @@
             // 
             this.btn_Delete.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_Delete.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_Delete.ImageOptions.Image")));
-            this.btn_Delete.Location = new System.Drawing.Point(352, 91);
+            this.btn_Delete.Location = new System.Drawing.Point(356, 91);
             this.btn_Delete.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_Delete.Name = "btn_Delete";
             this.btn_Delete.Size = new System.Drawing.Size(126, 44);
@@ -65,7 +65,7 @@
             // 
             this.btn_close.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_close.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_close.ImageOptions.Image")));
-            this.btn_close.Location = new System.Drawing.Point(485, 91);
+            this.btn_close.Location = new System.Drawing.Point(489, 91);
             this.btn_close.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_close.Name = "btn_close";
             this.btn_close.Size = new System.Drawing.Size(126, 44);
@@ -77,7 +77,7 @@
             // 
             this.btn_refesrh.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_refesrh.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_refesrh.ImageOptions.Image")));
-            this.btn_refesrh.Location = new System.Drawing.Point(219, 91);
+            this.btn_refesrh.Location = new System.Drawing.Point(223, 91);
             this.btn_refesrh.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_refesrh.Name = "btn_refesrh";
             this.btn_refesrh.Size = new System.Drawing.Size(126, 44);
@@ -89,7 +89,7 @@
             // 
             this.btn_Add.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_Add.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_Add.ImageOptions.Image")));
-            this.btn_Add.Location = new System.Drawing.Point(89, 91);
+            this.btn_Add.Location = new System.Drawing.Point(93, 91);
             this.btn_Add.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_Add.Name = "btn_Add";
             this.btn_Add.Size = new System.Drawing.Size(124, 44);
@@ -100,7 +100,7 @@
             // txt_TenQue
             // 
             this.txt_TenQue.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_TenQue.Location = new System.Drawing.Point(243, 41);
+            this.txt_TenQue.Location = new System.Drawing.Point(247, 41);
             this.txt_TenQue.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_TenQue.Name = "txt_TenQue";
             this.txt_TenQue.Size = new System.Drawing.Size(262, 22);
@@ -109,7 +109,7 @@
             // txt_MaQue
             // 
             this.txt_MaQue.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_MaQue.Location = new System.Drawing.Point(243, 4);
+            this.txt_MaQue.Location = new System.Drawing.Point(247, 4);
             this.txt_MaQue.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_MaQue.Name = "txt_MaQue";
             this.txt_MaQue.Size = new System.Drawing.Size(262, 22);
@@ -118,7 +118,7 @@
             // labelControl2
             // 
             this.labelControl2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelControl2.Location = new System.Drawing.Point(176, 45);
+            this.labelControl2.Location = new System.Drawing.Point(180, 45);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(49, 16);
@@ -128,7 +128,7 @@
             // labelControl1
             // 
             this.labelControl1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelControl1.Location = new System.Drawing.Point(181, 8);
+            this.labelControl1.Location = new System.Drawing.Point(185, 8);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(44, 16);
@@ -151,7 +151,7 @@
             this.panelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelControl1.Name = "panelControl1";
             this.tablePanel1.SetRow(this.panelControl1, 0);
-            this.panelControl1.Size = new System.Drawing.Size(699, 151);
+            this.panelControl1.Size = new System.Drawing.Size(707, 151);
             this.panelControl1.TabIndex = 17;
             // 
             // tablePanel1
@@ -167,7 +167,7 @@
             this.tablePanel1.Rows.AddRange(new DevExpress.Utils.Layout.TablePanelRow[] {
             new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 159F),
             new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 26F)});
-            this.tablePanel1.Size = new System.Drawing.Size(705, 720);
+            this.tablePanel1.Size = new System.Drawing.Size(713, 728);
             this.tablePanel1.TabIndex = 19;
             // 
             // dataGridView1
@@ -184,7 +184,7 @@
             this.tablePanel1.SetRow(this.dataGridView1, 1);
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(699, 553);
+            this.dataGridView1.Size = new System.Drawing.Size(707, 561);
             this.dataGridView1.TabIndex = 18;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
             this.dataGridView1.DoubleClick += new System.EventHandler(this.DataGridView1_DoubleClick);
@@ -193,7 +193,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(705, 720);
+            this.ClientSize = new System.Drawing.Size(713, 728);
             this.ControlBox = false;
             this.Controls.Add(this.tablePanel1);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
