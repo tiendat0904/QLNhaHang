@@ -24,7 +24,7 @@ namespace QLBH
         public frm_HoSoNhanVien()
         {
             InitializeComponent();
-         //  list_que = staticData._Que;
+            //  list_que = staticData._Que;
         }
 
         private void add()
@@ -37,7 +37,7 @@ namespace QLBH
         {
             dataGridView1.DataSource = query.DocBang("select * from NhanVien");
         }
-        private List<Class_NhanVien> Select1()
+        private List<Class_NhanVien> Select()
         {
             string sql = "SELECT * FROM NhanVien";
             List<Class_NhanVien> list = new List<Class_NhanVien>();
@@ -69,8 +69,8 @@ namespace QLBH
 
         private void Button_themmoi_Click(object sender, EventArgs e)
         {
-            nv = Select1();
-            //bool check = false;
+            nv = Select();
+            bool check = false;
 
             //foreach (Class_Que i in list_que)
             //{
@@ -82,18 +82,18 @@ namespace QLBH
             //    }
             //}
             //for(int i=0;i<que)
-            //for(int i = 0; i < nv.Count; i++)
-            //{
-            //    if (nv[i].MaNhanVien1.Equals(txt_manv.Text))
-            //    {
-            //        check = true;
-            //        MessageBox.Show("đã có mã nhân viên này, vui lòng nhập lại");
-            //        break;
-            //    }
-            //}
+            for (int i = 0; i < nv.Count; i++)
+            {
+                if (nv[i].MaNhanVien1.Equals(txt_manv.Text))
+                {
+                    check = true;
+                    MessageBox.Show("đã có mã nhân viên này, vui lòng nhập lại");
+                    break;
+                }
+            }
 
-            //if (check == false)
-            //{
+            if (check == false)
+            {
                 if (txt_manv.Text.Trim() != "" || txt_tennv.Text.Trim() != "" || cbb_gioitinh.Text.Trim() != "" || txt_diachi.Text.Trim() != "" || txt_dienthoai.Text.Trim() != "" || txt_maque.Text.Trim() != "")
                 {
                     string sql = "insert into NhanVien values('" + txt_manv.Text + "',N'" + txt_tennv.Text + "',N'" + cbb_gioitinh.Text + "','" + txt_ngaysinh.Text + "',N'" + txt_diachi.Text + "','" + txt_maque.Text + "','" + txt_dienthoai.Text + "')";
@@ -114,7 +114,7 @@ namespace QLBH
                 {
                     MessageBox.Show("vui lòng nhập đầy đủ thông tin");
                 }
-           // }
+            }
         }
 
         private void Frm_HoSoNhanVien_Load(object sender, EventArgs e)
@@ -125,42 +125,43 @@ namespace QLBH
 
         private void Button_capnhat_Click(object sender, EventArgs e)
         {
-            nv = Select1();
-            bool check = false;
+            nv = Select();
+            // bool check = false;
 
             //for(int i=0;i<que)
-            for (int i = 0; i < nv.Count; i++)
-            {
-                if (nv[i].MaNhanVien1.Equals(txt_manv.Text))
-                {
-                    check = true;
-                    MessageBox.Show("đã có mã nhân viên này, vui lòng nhập lại");
-                    break;
-                }
-            }
+            //for (int i = 0; i < nv.Count; i++)
+            //{
+            //    if (nv[i].MaNhanVien1.Equals(txt_manv.Text))
+            //    {
+            //        check = true;
+            //        MessageBox.Show("đã có mã nhân viên này, vui lòng nhập lại");
+            //        break;
+            //    }
+            //}
 
-            if (check == false)
+            //if (check == false)
+            //{
+            if (txt_manv.Text.Trim() != "" || txt_tennv.Text.Trim() != "" || cbb_gioitinh.Text.Trim() != "" || txt_diachi.Text.Trim() != "" || txt_dienthoai.Text.Trim() != "" || txt_maque.Text.Trim() != "")
             {
-                if (txt_manv.Text.Trim() != "" || txt_tennv.Text.Trim() != "" || cbb_gioitinh.Text.Trim() != "" || txt_diachi.Text.Trim() != "" || txt_dienthoai.Text.Trim() != "" || txt_maque.Text.Trim() != "")
-                {
-                    string sql = "update NhanVien set TenNhanVien=N'" + txt_tennv.Text + "',N'" + cbb_gioitinh.Text + "',N'" + txt_ngaysinh.Text + "',N'" + txt_diachi.Text + "',N'" + txt_maque.Text + "',N'" + txt_dienthoai.Text + "'";
-                    query.CapNhatDuLieu(sql);
-                    fill();
+                string sql = "update NhanVien set TenNhanVien=N'" + txt_tennv.Text + "',GioiTinh=N'" + cbb_gioitinh.Text + "',NgaySinh=N'" + txt_ngaysinh.Text + "',DiaChi=N'" + txt_diachi.Text + "',MaQue=N'" + txt_maque.Text + "',DienThoai=N'" + txt_dienthoai.Text + "' where MaNhanVien =N'" + txt_manv.Text + "'";
+                query.CapNhatDuLieu(sql);
+                fill();
 
-                    nv.Add(new Class_NhanVien(txt_manv.Text, txt_tennv.Text, cbb_gioitinh.Text, Convert.ToDateTime(txt_ngaysinh.Text), txt_diachi.Text, txt_maque.Text, txt_dienthoai.Text));
-                    txt_manv.Text = "";
-                    txt_tennv.Text = "";
-                    cbb_gioitinh.Text = "";
-                    txt_ngaysinh.Text = "";
-                    txt_diachi.Text = "";
-                    txt_maque.Text = "";
-                    txt_dienthoai.Text = "";
-                }
-                else
-                {
-                    MessageBox.Show("vui lòng nhập đầy đủ thông tin ");
-                }
+                nv.Add(new Class_NhanVien(txt_manv.Text, txt_tennv.Text, cbb_gioitinh.Text, Convert.ToDateTime(txt_ngaysinh.Text), txt_diachi.Text, txt_maque.Text, txt_dienthoai.Text));
+                txt_manv.Text = "";
+                txt_tennv.Text = "";
+                cbb_gioitinh.Text = "";
+                txt_ngaysinh.Text = "";
+                txt_diachi.Text = "";
+                txt_maque.Text = "";
+                txt_dienthoai.Text = "";
+                txt_manv.Enabled = true;
             }
+            else
+            {
+                MessageBox.Show("vui lòng nhập đầy đủ thông tin ");
+            }
+            //}
         }
 
         private void DataGridView1_DoubleClick(object sender, EventArgs e)
@@ -191,6 +192,7 @@ namespace QLBH
                 txt_diachi.Text = "";
                 txt_maque.Text = "";
                 txt_dienthoai.Text = "";
+
             }
         }
 

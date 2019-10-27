@@ -34,7 +34,7 @@ namespace QLBH
         private void Btn_Add_Click(object sender, EventArgs e)
         {
             //string a = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-            que = Select3();
+            que = Select();
             bool check = false;
             for (int i = 0; i < que.Count; i++)
             {
@@ -66,7 +66,7 @@ namespace QLBH
                 }
             }
         }
-        private List<Class_Que> Select3()
+        private List<Class_Que> Select()
         {
             string sql = "SELECT * FROM Que";
             List<Class_Que> list = new List<Class_Que>();
@@ -93,7 +93,7 @@ namespace QLBH
 
         private void Btn_refesrh_Click(object sender, EventArgs e)
         {
-            que = Select3();
+            que = Select();
             //bool check = false;
             //for (int i = 0; i < que.Count; i++)
             //{
