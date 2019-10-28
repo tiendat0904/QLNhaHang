@@ -19,13 +19,14 @@ namespace QLBH
     {
         List<Class_Que> que;
         ConnectAndQuery query = new ConnectAndQuery();
+
         public Frm_QueQuan()
         {
             InitializeComponent();
             //fill();
             //que = Select();
         }
-        private void fill()
+        public void fill()
         {
             dataGridView1.DataSource = query.DocBang("select * from Que");
 
@@ -66,7 +67,7 @@ namespace QLBH
                 }
             }
         }
-        private List<Class_Que> Select()
+        public new List<Class_Que> Select()
         {
             string sql = "SELECT * FROM Que";
             List<Class_Que> list = new List<Class_Que>();

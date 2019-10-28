@@ -18,7 +18,7 @@ namespace QLBH
 {
     public partial class frm_HoSoNhanVien : DevExpress.XtraEditors.XtraForm
     {
-        //List<Class_Que> list_que = new List<Class_Que>();
+        List<Class_Que> list_que= new List<Class_Que>();
         List<Class_NhanVien> nv;
         ConnectAndQuery query = new ConnectAndQuery();
         public frm_HoSoNhanVien()
@@ -70,17 +70,23 @@ namespace QLBH
         private void Button_themmoi_Click(object sender, EventArgs e)
         {
             nv = Select();
+            list_que = new Frm_QueQuan().Select();
             bool check = false;
+            bool kiemtra = false;
 
-            //foreach (Class_Que i in list_que)
-            //{
-            //    if (i.MaQue1 != txt_maque.Text)
-            //    {
-            //        check = true;
-            //        MessageBox.Show("không có mã quê" + txt_maque.Text + "này");
-            //        break;
-            //    }
-            //}
+            for(int i=0;i<list_que.Count;i++)
+            {
+                if (list_que[i].MaQue1.Equals(txt_maque.Text))
+                {
+                    kiemtra = true;
+                    check = false;       
+                }
+            }
+
+            if (kiemtra == false)
+            {
+                MessageBox.Show("không có mã "+txt_maque.Text+" này");
+            }
             //for(int i=0;i<que)
             for (int i = 0; i < nv.Count; i++)
             {

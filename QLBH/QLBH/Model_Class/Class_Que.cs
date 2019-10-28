@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace QLBH.Model_Class
 {
-    class Class_Que
+    public class Class_Que
     {
         private string MaQue;
         private string TenQue;
