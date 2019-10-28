@@ -31,12 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_NguyenLieu));
             this.button_themmoi = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.textEdit9 = new DevExpress.XtraEditors.TextEdit();
+            this.txt_ccdtk = new DevExpress.XtraEditors.TextEdit();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.txt_congdungtk = new DevExpress.XtraEditors.TextEdit();
+            this.txt_tentk = new DevExpress.XtraEditors.TextEdit();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
@@ -65,9 +65,9 @@
             this.txt_tennl = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit9.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_ccdtk.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_congdungtk.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_tentk.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txt_manl.Properties)).BeginInit();
@@ -102,33 +102,33 @@
             this.panelControl1.Appearance.Options.UseBackColor = true;
             this.tablePanel1.SetColumn(this.panelControl1, 0);
             this.tablePanel1.SetColumnSpan(this.panelControl1, 2);
-            this.panelControl1.Controls.Add(this.textEdit9);
+            this.panelControl1.Controls.Add(this.txt_ccdtk);
             this.panelControl1.Controls.Add(this.labelControl3);
             this.panelControl1.Controls.Add(this.labelControl2);
             this.panelControl1.Controls.Add(this.labelControl1);
-            this.panelControl1.Controls.Add(this.textEdit2);
-            this.panelControl1.Controls.Add(this.textEdit1);
+            this.panelControl1.Controls.Add(this.txt_congdungtk);
+            this.panelControl1.Controls.Add(this.txt_tentk);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl1.Location = new System.Drawing.Point(3, 48);
             this.panelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelControl1.Name = "panelControl1";
             this.tablePanel1.SetRow(this.panelControl1, 1);
-            this.panelControl1.Size = new System.Drawing.Size(1552, 34);
+            this.panelControl1.Size = new System.Drawing.Size(1560, 34);
             this.panelControl1.TabIndex = 6;
             // 
-            // textEdit9
+            // txt_ccdtk
             // 
-            this.textEdit9.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textEdit9.Location = new System.Drawing.Point(904, 6);
-            this.textEdit9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textEdit9.Name = "textEdit9";
-            this.textEdit9.Size = new System.Drawing.Size(117, 22);
-            this.textEdit9.TabIndex = 6;
+            this.txt_ccdtk.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_ccdtk.Location = new System.Drawing.Point(908, 6);
+            this.txt_ccdtk.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txt_ccdtk.Name = "txt_ccdtk";
+            this.txt_ccdtk.Size = new System.Drawing.Size(117, 22);
+            this.txt_ccdtk.TabIndex = 6;
             // 
             // labelControl3
             // 
             this.labelControl3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelControl3.Location = new System.Drawing.Point(806, 10);
+            this.labelControl3.Location = new System.Drawing.Point(810, 10);
             this.labelControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(101, 17);
@@ -138,7 +138,7 @@
             // labelControl2
             // 
             this.labelControl2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelControl2.Location = new System.Drawing.Point(599, 10);
+            this.labelControl2.Location = new System.Drawing.Point(603, 10);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(76, 17);
@@ -148,30 +148,30 @@
             // labelControl1
             // 
             this.labelControl1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelControl1.Location = new System.Drawing.Point(274, 10);
+            this.labelControl1.Location = new System.Drawing.Point(278, 10);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(108, 17);
             this.labelControl1.TabIndex = 2;
             this.labelControl1.Text = "Tên Nguyên Liệu:";
             // 
-            // textEdit2
+            // txt_congdungtk
             // 
-            this.textEdit2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textEdit2.Location = new System.Drawing.Point(672, 6);
-            this.textEdit2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Size = new System.Drawing.Size(117, 22);
-            this.textEdit2.TabIndex = 1;
+            this.txt_congdungtk.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_congdungtk.Location = new System.Drawing.Point(676, 6);
+            this.txt_congdungtk.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txt_congdungtk.Name = "txt_congdungtk";
+            this.txt_congdungtk.Size = new System.Drawing.Size(117, 22);
+            this.txt_congdungtk.TabIndex = 1;
             // 
-            // textEdit1
+            // txt_tentk
             // 
-            this.textEdit1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textEdit1.Location = new System.Drawing.Point(379, 6);
-            this.textEdit1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(182, 22);
-            this.textEdit1.TabIndex = 0;
+            this.txt_tentk.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_tentk.Location = new System.Drawing.Point(383, 6);
+            this.txt_tentk.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txt_tentk.Name = "txt_tentk";
+            this.txt_tentk.Size = new System.Drawing.Size(182, 22);
+            this.txt_tentk.TabIndex = 0;
             // 
             // panelControl2
             // 
@@ -187,7 +187,7 @@
             this.panelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelControl2.Name = "panelControl2";
             this.tablePanel1.SetRow(this.panelControl2, 0);
-            this.panelControl2.Size = new System.Drawing.Size(1552, 36);
+            this.panelControl2.Size = new System.Drawing.Size(1560, 36);
             this.panelControl2.TabIndex = 12;
             // 
             // simpleButton1
@@ -199,6 +199,7 @@
             this.simpleButton1.Size = new System.Drawing.Size(117, 41);
             this.simpleButton1.TabIndex = 19;
             this.simpleButton1.Text = "Thoát";
+            this.simpleButton1.Click += new System.EventHandler(this.SimpleButton1_Click);
             // 
             // simpleButton4
             // 
@@ -231,6 +232,7 @@
             this.simpleButton5.Size = new System.Drawing.Size(117, 41);
             this.simpleButton5.TabIndex = 15;
             this.simpleButton5.Text = "Tìm Kiếm";
+            this.simpleButton5.Click += new System.EventHandler(this.SimpleButton5_Click);
             // 
             // labelControl17
             // 
@@ -279,7 +281,7 @@
             // 
             // labelControl5
             // 
-            this.labelControl5.Location = new System.Drawing.Point(24, 103);
+            this.labelControl5.Location = new System.Drawing.Point(17, 103);
             this.labelControl5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(108, 17);
@@ -293,7 +295,7 @@
             this.txt_manl.Location = new System.Drawing.Point(462, 100);
             this.txt_manl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_manl.Name = "txt_manl";
-            this.txt_manl.Size = new System.Drawing.Size(200, 22);
+            this.txt_manl.Size = new System.Drawing.Size(204, 22);
             this.txt_manl.TabIndex = 2;
             // 
             // txt_donvitinh
@@ -321,7 +323,7 @@
             new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 44F),
             new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 42F),
             new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 26F)});
-            this.tablePanel1.Size = new System.Drawing.Size(1558, 644);
+            this.tablePanel1.Size = new System.Drawing.Size(1566, 652);
             this.tablePanel1.TabIndex = 3;
             // 
             // dataGridView1
@@ -334,7 +336,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.tablePanel1.SetRow(this.dataGridView1, 2);
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(841, 550);
+            this.dataGridView1.Size = new System.Drawing.Size(845, 558);
             this.dataGridView1.TabIndex = 17;
             this.dataGridView1.DoubleClick += new System.EventHandler(this.DataGridView1_DoubleClick);
             // 
@@ -361,11 +363,11 @@
             this.groupControl1.Controls.Add(this.txt_tennl);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.GroupStyle = DevExpress.Utils.GroupStyle.Light;
-            this.groupControl1.Location = new System.Drawing.Point(850, 90);
+            this.groupControl1.Location = new System.Drawing.Point(854, 90);
             this.groupControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupControl1.Name = "groupControl1";
             this.tablePanel1.SetRow(this.groupControl1, 2);
-            this.groupControl1.Size = new System.Drawing.Size(705, 550);
+            this.groupControl1.Size = new System.Drawing.Size(709, 558);
             this.groupControl1.TabIndex = 16;
             this.groupControl1.Text = "Chi Tiết Thân Nhân";
             // 
@@ -376,7 +378,7 @@
             this.txt_chongchidinh.Location = new System.Drawing.Point(462, 196);
             this.txt_chongchidinh.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_chongchidinh.Name = "txt_chongchidinh";
-            this.txt_chongchidinh.Size = new System.Drawing.Size(200, 22);
+            this.txt_chongchidinh.Size = new System.Drawing.Size(204, 22);
             this.txt_chongchidinh.TabIndex = 51;
             // 
             // txt_yeucau
@@ -412,7 +414,7 @@
             this.txt_dongiaban.Location = new System.Drawing.Point(462, 164);
             this.txt_dongiaban.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_dongiaban.Name = "txt_dongiaban";
-            this.txt_dongiaban.Size = new System.Drawing.Size(200, 22);
+            this.txt_dongiaban.Size = new System.Drawing.Size(204, 22);
             this.txt_dongiaban.TabIndex = 47;
             this.txt_dongiaban.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_dongiaban_KeyPress);
             // 
@@ -432,7 +434,7 @@
             this.txt_soluong.Location = new System.Drawing.Point(462, 132);
             this.txt_soluong.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_soluong.Name = "txt_soluong";
-            this.txt_soluong.Size = new System.Drawing.Size(200, 22);
+            this.txt_soluong.Size = new System.Drawing.Size(204, 22);
             this.txt_soluong.TabIndex = 45;
             this.txt_soluong.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_soluong_KeyPress);
             // 
@@ -444,7 +446,7 @@
             this.txt_congdung.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_congdung.Multiline = true;
             this.txt_congdung.Name = "txt_congdung";
-            this.txt_congdung.Size = new System.Drawing.Size(537, 109);
+            this.txt_congdung.Size = new System.Drawing.Size(541, 109);
             this.txt_congdung.TabIndex = 44;
             // 
             // labelControl8
@@ -468,7 +470,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1558, 644);
+            this.ClientSize = new System.Drawing.Size(1566, 652);
             this.ControlBox = false;
             this.Controls.Add(this.tablePanel1);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -478,9 +480,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit9.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_ccdtk.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_congdungtk.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_tentk.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txt_manl.Properties)).EndInit();
@@ -530,12 +532,12 @@
         private DevExpress.XtraEditors.SimpleButton simpleButton4;
         private DevExpress.XtraEditors.SimpleButton button_capnhat;
         private DevExpress.XtraEditors.SimpleButton simpleButton5;
-        private DevExpress.XtraEditors.TextEdit textEdit9;
+        private DevExpress.XtraEditors.TextEdit txt_ccdtk;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.TextEdit txt_congdungtk;
+        private DevExpress.XtraEditors.TextEdit txt_tentk;
         private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

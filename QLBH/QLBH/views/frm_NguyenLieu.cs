@@ -46,9 +46,9 @@ namespace QLBH
                         string MaNguyenLieu = reader.GetString(0);
                         string TenNguyenLieu = reader.GetString(1);
                         string DonViTinh = reader.GetString(2);
-                        float SoLuong = reader.GetFloat(3);
-                        float DonGiaNhap = reader.GetFloat(4);
-                        float DonGiaBan = reader.GetFloat(5);
+                        double SoLuong = reader.GetDouble(3);
+                        double DonGiaNhap = reader.GetDouble(4);
+                        double DonGiaBan = reader.GetDouble(5);
                         string CongDung = reader.GetString(6);
                         string YeuCau = reader.GetString(7);
                         string ChongChiDinh = reader.GetString(8);
@@ -93,7 +93,7 @@ namespace QLBH
                     txt_congdung.Text = "";
                     txt_yeucau.Text = "";
                     txt_chongchidinh.Text = "";
-                    txt_manl.Enabled = true;
+                    //txt_manl.Enabled = true;
                 }
                 else
                 {
@@ -107,34 +107,9 @@ namespace QLBH
             fill();
         }
 
-        private void Txt_soluong_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            //if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
-            //{
-
-            //    e.Handled = true;
-            //}
-        }
-
-        private void Txt_dongianhap_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            //if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
-            //{
-
-            //    e.Handled = true;
-            //}
-        }
 
 
 
-        private void Txt_dongiaban_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            //if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
-            //{
-
-            //    e.Handled = true;
-            //}
-        }
 
         private void DataGridView1_DoubleClick(object sender, EventArgs e)
         {
@@ -153,43 +128,33 @@ namespace QLBH
         private void Button_capnhat_Click(object sender, EventArgs e)
         {
             nguyen_lieu = Select();
-            bool check = false;
-            for (int i = 0; i < nguyen_lieu.Count; i++)
-            {
-                if (nguyen_lieu[i].TenNguyenLieu1.Equals(txt_tennl.Text))
-                {
-                    check = true;
-                    MessageBox.Show("đã có tên nguyên liệu này");
-                    break;
-                }
-            }
 
-            if (check == false)
+
+
+
+            if (txt_manl.Text.Trim() != "" || txt_tennl.Text.Trim() != "" || txt_donvitinh.Text.Trim() != "" || txt_soluong.Text.Trim() != "" || txt_dongianhap.Text.Trim() != "" || txt_dongiaban.Text.Trim() != "" || txt_congdung.Text.Trim() != "" || txt_yeucau.Text.Trim() != "" || txt_chongchidinh.Text.Trim() != "")
             {
 
-                if (txt_manl.Text.Trim() != "" || txt_tennl.Text.Trim() != "" || txt_donvitinh.Text.Trim() != "" || txt_soluong.Text.Trim() != "" || txt_dongianhap.Text.Trim() != "" || txt_dongiaban.Text.Trim() != "" || txt_congdung.Text.Trim() != "" || txt_yeucau.Text.Trim() != "" || txt_chongchidinh.Text.Trim() != "")
-                {
-
-                    string sql = "update NguyenLieu set TenNguyenLieu=N'" + txt_tennl.Text + "',DonViTinh=N'" + txt_donvitinh.Text + "',SoLuong='" + txt_soluong.Text + "',DonGiaNhap='" + txt_dongianhap.Text + "',DonGiaBan='" + txt_dongiaban.Text + "',CongDung=N'" + txt_congdung.Text + "',YeuCau=N'" + txt_yeucau.Text + "',ChongChiDinh=N'" + txt_chongchidinh.Text + "' where MaNguyenLieu = N'" + txt_manl.Text + "'";
-                    query.CapNhatDuLieu(sql);
-                    fill();
-                    nguyen_lieu.Add(new Class_NguyenLieu(txt_manl.Text, txt_tennl.Text, txt_donvitinh.Text, float.Parse(txt_soluong.Text), float.Parse(txt_dongianhap.Text), float.Parse(txt_dongiaban.Text), txt_congdung.Text, txt_yeucau.Text, txt_chongchidinh.Text));
-                    txt_manl.Text = "";
-                    txt_tennl.Text = "";
-                    txt_donvitinh.Text = "";
-                    txt_soluong.Text = "";
-                    txt_dongianhap.Text = "";
-                    txt_dongiaban.Text = "";
-                    txt_congdung.Text = "";
-                    txt_yeucau.Text = "";
-                    txt_chongchidinh.Text = "";
-                    txt_manl.Enabled = true;
-                }
-                else
-                {
-                    MessageBox.Show("vui lòng nhập đầy đủ thông tin");
-                }
+                string sql = "update NguyenLieu set TenNguyenLieu=N'" + txt_tennl.Text + "',DonViTinh=N'" + txt_donvitinh.Text + "',SoLuong='" + txt_soluong.Text + "',DonGiaNhap='" + txt_dongianhap.Text + "',DonGiaBan='" + txt_dongiaban.Text + "',CongDung=N'" + txt_congdung.Text + "',YeuCau=N'" + txt_yeucau.Text + "',ChongChiDinh=N'" + txt_chongchidinh.Text + "' where MaNguyenLieu = N'" + txt_manl.Text + "'";
+                query.CapNhatDuLieu(sql);
+                fill();
+                nguyen_lieu.Add(new Class_NguyenLieu(txt_manl.Text, txt_tennl.Text, txt_donvitinh.Text, double.Parse(txt_soluong.Text), double.Parse(txt_dongianhap.Text), double.Parse(txt_dongiaban.Text), txt_congdung.Text, txt_yeucau.Text, txt_chongchidinh.Text));
+                txt_manl.Text = "";
+                txt_tennl.Text = "";
+                txt_donvitinh.Text = "";
+                txt_soluong.Text = "";
+                txt_dongianhap.Text = "";
+                txt_dongiaban.Text = "";
+                txt_congdung.Text = "";
+                txt_yeucau.Text = "";
+                txt_chongchidinh.Text = "";
+                txt_manl.Enabled = true;
             }
+            else
+            {
+                MessageBox.Show("vui lòng nhập đầy đủ thông tin");
+            }
+
         }
 
         private void SimpleButton4_Click(object sender, EventArgs e)
@@ -200,16 +165,73 @@ namespace QLBH
                 string sql = "delete from NguyenLieu where MaNguyenLieu = N'" + txt_manl.Text + "'";
                 query.CapNhatDuLieu(sql);
                 fill();
-                //txt_manv.Enabled = true;
-                //txt_manv.Text = "";
-                //txt_tennv.Text = "";
-                //cbb_gioitinh.Text = "";
-                //txt_ngaysinh.Text = "";
-                //txt_diachi.Text = "";
-                //txt_maque.Text = "";
-                //txt_dienthoai.Text = "";
+                txt_manl.Text = "";
+                txt_tennl.Text = "";
+                txt_donvitinh.Text = "";
+                txt_soluong.Text = "";
+                txt_dongianhap.Text = "";
+                txt_dongiaban.Text = "";
+                txt_congdung.Text = "";
+                txt_yeucau.Text = "";
+                txt_chongchidinh.Text = "";
+                txt_manl.Enabled = true;
 
             }
+        }
+
+        private void Txt_soluong_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+            {
+
+                e.Handled = true;
+            }
+        }
+
+        private void Txt_dongianhap_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+            {
+
+                e.Handled = true;
+            }
+        }
+
+        private void Txt_dongiaban_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+            {
+
+                e.Handled = true;
+            }
+        }
+
+        private void SimpleButton1_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("bạn có muốn thoát không ?", "thông báo", MessageBoxButtons.YesNo,
+              MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
+
+        private void SimpleButton5_Click(object sender, EventArgs e)
+        {
+            string sql = "select  * from NguyenLieu where MaNguyenLieu is not null";
+            if (txt_tentk.Text != "")
+            {
+                sql += " and TenNguyenLieu like N'" + txt_tentk.Text.Trim() + "%'";
+            }
+            if (txt_congdungtk.Text != "")
+            {
+                sql += " and CongDung like N'" + txt_congdungtk.Text.Trim() + "%'";
+            }
+            if (txt_tentk.Text != "")
+            {
+                sql += " and ChongChiDinh like N'" + txt_ccdtk.Text.Trim() + "%'";
+            }
+            DataTable a = query.DocBang(sql);
+            dataGridView1.DataSource = a;
         }
     }
 }
